@@ -11,5 +11,6 @@ test5 = TestCase $ assertEqual "factors of 5 are [5]" [5] (primeFactors 5)
 test6 = TestCase $ assertEqual "factors of 5 are [6]" [2,3] (primeFactors 6)
 test7 = TestCase $ assertEqual "factors of 7 are [7]" [7] (primeFactors 7)
 test8 = TestCase $ assertEqual "factors of 8 are [8]" [2,2,2] (primeFactors 8)
+test9 = TestCase $ assertEqual "factors of 9 are [9]" [3,3] (primeFactors 9)
 
 main = runTestTT $ TestList [test1, test2, test3, test4, test5, test6, test7, test8]
