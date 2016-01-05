@@ -1,16 +1,15 @@
 (ns prime-factors.core)
 
 (defn primes
-    ([num]
+    ([num] (primes num 2))
+    ([num divisor]
         (cond
-            (< num 2)
+            (< num divisor)
                 []
-            (and (zero? (rem num 2)) (> num 2))
-                (cons 2 (primes (/ num 2)))
-            (and (zero? (rem num 3)))
-                (cons 3 (primes (/ num 3)))
+            (zero? (rem num divisor))
+                (cons divisor (primes (/ num divisor) divisor))
             :else
-                [num]
+                (primes num (inc divisor))
         )
     )
 )
