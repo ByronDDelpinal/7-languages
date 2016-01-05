@@ -1,7 +1,6 @@
 def prime_factors(num, candidate = 2)
-    retVal = []
     if num == 1
-        retVal
+        []
     elsif num % candidate == 0
         [candidate] + prime_factors(num / candidate, candidate)
     else
